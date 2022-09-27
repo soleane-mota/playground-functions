@@ -12,14 +12,22 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(period) {
+  let words = [];
+  let word = '';
+  for (let index = 0; index < period.length; index += 1) {
+    if (period[index] !== ' ') {
+      word += period[index];
+    }
+  }
+  words.push(word);
+  return words;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+function concatName(names) {
+  return `${names[names.length - 1]}, ${names[0]}`;
+}git
 
 // Desafio 5
 function footballPoints() {
