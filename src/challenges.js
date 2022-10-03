@@ -60,7 +60,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrayNum) {
   let arrayFizzBuzz = [];
-  for (let index = 0; index < arrayNum.length; index++) {
+  for (let index = 0; index < arrayNum.length; index += 1) {
     if (arrayNum[index] % 3 === 0 && arrayNum[index] % 5 === 0) {
       arrayFizzBuzz.push('fizzBuzz');
     } else if (arrayNum[index] % 3 === 0) {
@@ -75,16 +75,48 @@ function fizzBuzz(arrayNum) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(letters) {
+  let code = '';
+  for (let index = 0; index < letters.length; index += 1) {
+    if (letters[index] === 'a'){
+      code += '1';
+    } else if (letters[index] === 'e') {
+      code += '2';
+    } else if (letters[index] === 'i') {
+      code += '3';
+    } else if (letters[index] === 'o') {
+      code += '4';
+    } else if (letters[index] === 'u') {
+      code += '5';
+    } else {
+      code += letters[index];
+    }
+  }
+  return code;
 }
-function decode() {
-  // seu código aqui
+function decode(text) {
+  let decoder = '';
+  for (let index = 0; index < text.length; index += 1) {
+    if (text[index] === '1'){
+      decoder += 'a';
+    } else if (text[index] === '2') {
+      decoder += 'e';
+    } else if (text[index] === '3') {
+      decoder += 'i';
+    } else if (text[index] === '4') {
+      decoder += 'o';
+    } else if (text[index] === '5') {
+      decoder += 'u';
+    } else {
+      decoder += text[index];
+    }
+  }
+  return decoder;
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  
 }
 
 module.exports = {
