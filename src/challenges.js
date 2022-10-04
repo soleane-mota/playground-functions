@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/cognitive-complexity */
 // Desafio 1
 function compareTrue(parameter1, parameter2) {
   if (parameter1 === true && parameter2 === true) {
@@ -13,14 +14,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(period) {
-  let words = [];
-  let word = '';
-  for (let index = 0; index < period.length; index += 1) {
-    if (period[index] !== ' ') {
-      word += period[index];
-    }
-  }
-  words.push(word);
+  const words = period.split(' ');
   return words;
 }
 
@@ -78,7 +72,7 @@ function fizzBuzz(arrayNum) {
 function encode(letters) {
   let code = '';
   for (let index = 0; index < letters.length; index += 1) {
-    if (letters[index] === 'a'){
+    if (letters[index] === 'a') {
       code += '1';
     } else if (letters[index] === 'e') {
       code += '2';
@@ -97,7 +91,7 @@ function encode(letters) {
 function decode(text) {
   let decoder = '';
   for (let index = 0; index < text.length; index += 1) {
-    if (text[index] === '1'){
+    if (text[index] === '1') {
       decoder += 'a';
     } else if (text[index] === '2') {
       decoder += 'e';
@@ -116,7 +110,16 @@ function decode(text) {
 
 // Desafio 10
 function techList(tech, name) {
-  
+ let objectList = {};
+  if (tech === []) {
+    return 'Vazio!';
+   } else {
+     for (let index = 0; index < tech.length; index += 1) {
+      objectList[`name`] = name;
+      objectList[`tech`] = tech[index];
+    }
+    return objectList;
+   }
 }
 
 module.exports = {
