@@ -109,19 +109,27 @@ function decode(text) {
 }
 
 // Desafio 10
-function techList(tech, name) {
- let objectList = {};
-  if (tech === []) {
+function techList(tech, namePerson) {
+  let objectArray = [];
+  if (tech.length === 0) {
     return 'Vazio!';
-   } else {
-     for (let index = 0; index < tech.length; index += 1) {
-      objectList[`name`] = name;
-      objectList[`tech`] = tech[index];
+  }
+  for (let index = 0; index < tech.length; index += 1) {
+    let objectList = {
+      name: namePerson,
+      tech: tech[index],
+    };
+    objectArray.push(objectList);
+  }
+  objectArray.sort(function(a, b) {
+    if(a.name < b.name) {
+      return false;
+    } else {
+      return true;
     }
-    return objectList;
-   }
+  }
 }
-
+// console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 module.exports = {
   calcArea,
   catAndMouse,
