@@ -8,3 +8,8 @@ Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua cr
 - quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
 - quais arquivos/pastas foram desenvolvidos pela Trybe.
 -->
+- Título e Imagem de capa;
+- Descrição do Projeto;
+- Funcionalidades e Demonstração da Aplicação;
+- Tecnologias utilizadas;
+- Link de acesso ao Projeto;
